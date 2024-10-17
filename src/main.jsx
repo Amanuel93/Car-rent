@@ -1,14 +1,3 @@
-// import React from 'react'
-// import ReactDOM from 'react-dom/client'
-// import App from './App.jsx'
-// import './index.css'
-
-// ReactDOM.createRoot(document.getElementById('root')).render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>,
-// )
-
 import React from "react";
 import ReactDOM from "react-dom/client";
 import {
@@ -23,6 +12,16 @@ import Booking from "./components/Booking/Booking";
 // import ServicesPage from './pages/ServicesPage'; // Example of another page
 import { ThemeProvider } from './ThemeContext'; // Import ThemeProvider
 import './index.css';
+import DashboardLoayout from "./DashboardLoayout";
+import Cars from "./components/Dashboard/Cars";
+import Addcar from "./components/Dashboard/Addcar";
+import Rental from "./components/Dashboard/Rental";
+import Setting from "./components/Dashboard/Setting";
+import Dashboard from "./components/Dashboard/Dashboard";
+import CarDetailPage from "./components/Dashboard/Cardetail";
+import CarsLoayout from "./CarsLayout";
+import RentalRequestDetail from "./components/Dashboard/Rentaldetail";
+import CarUpdatePage from "./components/Dashboard/Updatecar";
 
 // Define the router
 const router = createBrowserRouter([
@@ -35,7 +34,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/cars", 
+    path: "/product", 
     element: (
       <Layout>
         <CarListPage /> {/* Example of an About page */}
@@ -49,6 +48,51 @@ const router = createBrowserRouter([
         <Booking /> {/* Example of a Services page */}
       </Layout>
     ),
+  },
+  {
+    path:"Dashboard",
+    element:<DashboardLoayout/>,
+    children:[
+      {
+        path:"",
+        element:<Dashboard/>
+      },
+      {
+        path:"store",
+        element:<CarsLoayout/>,
+        children: [
+          {
+            path: "", // Nested route accessible under /store/:carId
+            element: <Cars />, // The component that shows details for a specific car
+          },
+          {
+            path: ":carId", // Nested route accessible under /store/:carId
+            element: <CarDetailPage />, // The component that shows details for a specific car
+          },
+        ],
+      },
+      {
+        path:"Add car",
+        element:<Addcar/>
+      },
+      {
+        path:"request",
+        element:<Rental/>
+      },
+      {
+        path:"setting",
+        element:<Setting/>
+      },
+      {
+        path:"request/:id",
+        element:<RentalRequestDetail/>
+      },
+      {
+        path:"update/:id",
+        element:<CarUpdatePage/>
+      }
+
+    ]
   }
 ]);
 

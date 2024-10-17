@@ -4,21 +4,22 @@ const testimonialData = [
   {
     name: "Abebe",
     image: "",
-    description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+    description: "The furniture I purchased is absolutely stunning! High-quality craftsmanship and it perfectly complements my living room. Highly recommend this store!",
     aosDelay: "0",
   },
   {
     name: "Kebede",
     image: "",
-    description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+    description: "I was impressed by the fast delivery and affordable prices. The furniture exceeded my expectations in both comfort and style.",
     aosDelay: "300",
   },
   {
     name: "Geleta",
     image: "",
-    description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+    description: "Exceptional service and beautiful furniture. The team helped me find the perfect pieces for my new office, and I couldn’t be happier with the results.",
     aosDelay: "1000",
   },
+  
 ];
 const Testimonial = () => {
   return (

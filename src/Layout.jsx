@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
 
   return (
     <div className="bg-white dark:bg-dark dark:text-white text-black overflow-x-hidden">
-      <Navbar theme={theme} setTheme={setTheme} /> 
+      <Navbar /> 
       {/* <Navbar/> */}
       <main>{children}</main>
       <Footer /> {/* Persistent Footer */}

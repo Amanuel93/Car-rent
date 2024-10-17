@@ -12,19 +12,19 @@ export const Navlinks = [
   },
   {
     id: 2,
-    name: "CARS",
-    link: "/cars",
+    name: "PRODUCTS",
+    link: "/product",
   },
   {
     id: 3,
     name: "ABOUT",
     link: "/#about",
   },
-  {
-    id: 4,
-    name: "BOOKING",
-    link: "/booking",
-  },
+  // {
+  //   id: 4,
+  //   name: "BOOKING",
+  //   link: "/booking",
+  // },
 ];
 const Navbar = ({ theme, setTheme }) => {
   const [showMenu, setShowMenu] = useState(false);
@@ -40,7 +40,7 @@ const Navbar = ({ theme, setTheme }) => {
       <div className="container py-2 md:py-0">
         <div className="flex justify-between items-center">
           <div>
-            <Link to="/"><span className="text-xl md:text-3xl font-bold font-serif">TMT Car rental & tour</span></Link>
+            <Link to="/"><span className="text-xl md:text-3xl font-bold font-serif"><span className="text-red-500">Techno</span> TED Furniture</span></Link>
           </div>
           <nav className="hidden md:block">
             <ul className="flex items-center gap-8">
@@ -99,7 +99,7 @@ const Navbar = ({ theme, setTheme }) => {
           </div>
         </div>
       </div>
-      <ResponsiveMenu showMenu={showMenu} />
+      <ResponsiveMenu showMenu={showMenu} onClick={toggleMenu}/>
     </div>
   );
 };

@@ -1,10 +1,9 @@
 import React from "react";
 import { FaUserCircle } from "react-icons/fa";
-
+import { Link } from "react-router-dom";
 import { Navlinks } from "./Navbar";
 
-const ResponsiveMenu = ({ showMenu }) => {
-  console.log("showMenu", showMenu);
+const ResponsiveMenu = ({ showMenu,onClick}) => {
   return (
     <div
       className={`${
@@ -15,25 +14,25 @@ const ResponsiveMenu = ({ showMenu }) => {
         <div className="flex items-center justify-start gap-3">
           <FaUserCircle size={50} />
           <div>
-            <h1>Hello User</h1>
-            <h1 className="text-sm text-slate-500">Premium user</h1>
+            <h1 className="font-bold">TECHNO FURNITURE</h1>
+            <h1 className="text-sm text-slate-500">Ensures comfort</h1>
           </div>
         </div>
         <nav className="mt-12">
           <ul className="space-y-4 text-xl">
-            {Navlinks.map((data) => (
-              <li key={data.id}>
-                <a href={data.link} className="mb-5 inline-block">
+            {Navlinks.map((data,index) => (
+              <li key={index}>
+                <Link to={data.link} className="mb-5 inline-block" onClick={onClick}>
                   {data.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
         </nav>
       </div>
       <div className="footer">
-        <h1>
-          Made with ❤ by <a href="https://dilshad-ahmed.github.io/">Dilshad</a>{" "}
+        <h1 className="text-[14px] font-bold">
+          All rights reserved 2024{" "}
         </h1>
       </div>
     </div>

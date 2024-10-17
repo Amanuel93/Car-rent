@@ -2,36 +2,32 @@ import React from "react";
 import { FaCameraRetro } from "react-icons/fa";
 import { GiNotebook } from "react-icons/gi";
 import { SlNote } from "react-icons/sl";
+import { FaChair } from "react-icons/fa";
+import { FaTruckMoving } from "react-icons/fa";
+import { FaScrewdriverWrench } from "react-icons/fa6";
 
-const skillsData = [
+const services = [
   {
-    name: "Best Price",
-    icon: (
-      <FaCameraRetro className="text-5xl text-primary group-hover:text-black duration-300" />
-    ),
+    name: "Affordable Pricing",
+    icon: <FaChair className="text-5xl text-primary group-hover:text-black duration-300" />,
     link: "#",
-    description: "Get the most value for your money with our competitive rates",
-    aosDelay: "0",
+    description: "Enjoy high-quality furniture at unbeatable prices for any room or style.",
   },
   {
-    name: "Fast and Safe",
-    icon: (
-      <GiNotebook className="text-5xl text-primary group-hover:text-black duration-300" />
-    ),
+    name: "Fast and Reliable Delivery",
+    icon: <FaTruckMoving className="text-5xl text-primary group-hover:text-black duration-300" />,
     link: "#",
-    description: "Enjoy quick and reliable service, ensuring your journey is smooth and secure",
-    aosDelay: "500",
+    description: "Count on our quick and reliable delivery to get your furniture to you right on time.",
   },
   {
-    name: "Experience Drivers",
-    icon: (
-      <SlNote className="text-5xl text-primary group-hover:text-black duration-500" />
-    ),
+    name: "Expert Assistance",
+    icon: <FaScrewdriverWrench className="text-5xl text-primary group-hover:text-black duration-500" />,
     link: "#",
-    description: "Our skilled and friendly drivers are committed to providing you with a comfortable and safe ride",
-    aosDelay: "1000",
+    description: "Our team provides expert guidance to help you find the perfect furniture for your space.",
   },
+  
 ];
+
 const Services = () => {
   return (
     <>
@@ -47,12 +43,10 @@ const Services = () => {
             </h1>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-            {skillsData.map((skill) => (
+            {services.map((skill) => (
               <div
                 key={skill.name}
-                data-aos="fade-up"
-                data-aos-delay={skill.aosDelay}
-                className="card text-center group space-y-3 sm:space-y-6 p-4 sm:py-16 bg-dark  hover:bg-primary duration-300 text-white hover:text-black rounded-lg"
+                className="card text-center group space-y-3 sm:space-y-6 p-4 sm:py-16 bg-orange-500 hover:bg-primary duration-300 text-white rounded-lg"
               >
                 <div className="grid place-items-center">{skill.icon}</div>
                 <h1 className="text-2xl font-bold">{skill.name}</h1>

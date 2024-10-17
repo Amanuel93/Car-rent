@@ -11,21 +11,25 @@ const FooterLinks = [
   {
     id:1,
     title: "Home",
+    location:'Bambis near Mekaneyesus church',
     link: "/#",
   },
   {
     id:2,
     title: "About",
+    location:'Yerer',
     link: "/#about",
   },
   {
     id:3,
     title: "Contact",
+    location:'Around Mekanisa',
     link: "/#contact",
   },
   {
     id:4,
     title: "Blog",
+    location:'Around Kara',
     link: "/#blog",
   },
 ];
@@ -35,21 +39,19 @@ const Footer = () => {
       <section className="container">
         <div className=" grid md:grid-cols-3 py-5">
           {/* company Details */}
-          <div className=" py-8 px-4 ">
-            <h1 className="sm:text-3xl text-xl font-bold sm:text-left text-justify mb-3 flex items-center gap-3 font-serif">
-              TMT Car Rental
+          <div className=" py-8 px-2 ">
+            <h1 className="sm:text-3xl  font-bold sm:text-left text-justify mb-3 flex  gap-3 font-serif">
+              TECHNO TED FURNITURE
             </h1>
-            <p className="text-sm">
-              TMT Car Rental & Tours company ( founded in 2005 G.C). experienced in providing Tour services & car hire services{" "}
-            </p>
             <br />
             <div className="flex items-center gap-3">
               <FaLocationArrow />
-              <p>Addis Ababa, Africa Ave, 1540</p>
+              <p className="text-white sm:text-[20px]">Mekanisa,Near Mekaneyesusu church, Addis Ababa, 1000</p>
             </div>
-            <div className="flex items-center gap-3 mt-3">
+            <div className="flex flex-col gap-3 mt-3">
               <FaMobileAlt />
-              <p>+251903101010</p>
+              <p>+251 911 245 678</p>
+              <p>+251 939 717 171</p>
             </div>
             {/* Social Handle */}
             <div className="flex items-center gap-3 mt-6">
@@ -81,7 +83,7 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div className="">
+            {/* <div className="">
               <div className="py-8 px-4 ">
                 <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3">
                   Links
@@ -95,7 +97,7 @@ const Footer = () => {
                   ))}
                 </ul>
               </div>
-            </div>
+            </div> */}
             <div className="">
               <div className="py-8 px-4 ">
                 <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3">
@@ -104,9 +106,9 @@ const Footer = () => {
                 {/* <ul className="list-disc list-inside"> */}
                 <ul className="flex flex-col gap-3">
                   {FooterLinks.map((link) => (
-                    <li className="cursor-pointer hover:translate-x-1 duration-300 hover:!text-primary space-x-1 text-gray-500 dark:text-gray-200" key={link.id}>
+                    <li className="cursor-pointer hover:translate-x-1 duration-300  space-x-1 text-white md:text-[20px] dark:text-gray-200" key={link.id}>
                       <span>&#11162;</span>
-                      <span>{link.title}</span>
+                      <span>{link.location}</span>
                     </li>
                   ))}
                 </ul>

@@ -27,7 +27,7 @@ const AppStoreBanner = () => {
               Get Started with our app
             </h1>
             <p data-aos="fade-up" className="text-center sm:px-20 px-2">
-              Whether it's a weekend getaway or a business trip, we have the perfect ride for you!
+              Whether it's a small or a large bussiness, we have the perfect FURNITURE for you!
             </p>
             <div
               data-aos="fade-up"
